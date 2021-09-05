@@ -137,7 +137,7 @@ def main(filepath_list):
     #Detection phase
     try:
         #imlist = [osp.join(osp.realpath('.'), images, img) for img in os.listdir(images) if os.path.splitext(img)[1] == '.png' or os.path.splitext(img)[1] =='.jpeg' or os.path.splitext(img)[1] =='.jpg']
-        imlist = [osp.join(osp.realpath('.'), img) for img in filepath_list if os.path.splitext(img)[1] == '.png' or os.path.splitext(img)[1] =='.jpeg' or os.path.splitext(img)[1] =='.jpg']
+        imlist = [osp.join(osp.realpath('.'), images, img) for img in filepath_list if os.path.splitext(img)[1] == '.png' or os.path.splitext(img)[1] =='.jpeg' or os.path.splitext(img)[1] =='.jpg']
     except NotADirectoryError:
         imlist = []
         imlist.append(osp.join(osp.realpath('.'), images))
